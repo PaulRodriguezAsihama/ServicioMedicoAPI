@@ -38,4 +38,12 @@ public class Paciente {
     }
 
 
+    public void actualizarInformacion(DatosActualizacionPaciente datosActualizacionPaciente) {
+        if (datosActualizacionPaciente.nombre() != null)
+            this.nombre = datosActualizacionPaciente.nombre();
+        if (datosActualizacionPaciente.telefono() != null)
+            this.telefono = datosActualizacionPaciente.telefono();
+        if (datosActualizacionPaciente.direccion() != null)
+            direccion.actualizarDatos(datosActualizacionPaciente.direccion());
+    }
 }
